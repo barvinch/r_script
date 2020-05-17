@@ -17,6 +17,7 @@ end_date <- today()-1
 
 CalltouchCalls <- function (dateFrom, dateTo, id, server, token) 
 {
+  proc_start <- Sys.time()
   ## Проверка на наличие необходимых параметров
   if (is.null(id) | is.null(token)) {
     stop(
